@@ -13,11 +13,28 @@ buildscript {
 }
 
 plugins {
+    `maven-publish`
     kotlin("jvm") version "1.3.70"
 }
 
-group = "io.tlazarski"
-version = "1.0.0-SNAPSHOT"
+publishing {
+    publications {
+        create<MavenPublication>("default") {
+            from(components["kotlin"])
+        }
+    }
+
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/tlazarski/kotlin-tuples")
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
+            }
+        }
+    }
+}
 
 repositories {
     mavenCentral()
