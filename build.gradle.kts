@@ -17,10 +17,16 @@ plugins {
     kotlin("jvm") version "1.3.70"
 }
 
+val sourcesJar by tasks.registering(Jar::class) {
+    classifier = "sources"
+    from(sourceSets.main.get().allSource)
+}
+
 publishing {
     publications {
         create<MavenPublication>("default") {
             from(components["kotlin"])
+            artifact(sourcesJar.get())
         }
     }
 
