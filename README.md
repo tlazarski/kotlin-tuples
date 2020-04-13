@@ -1,4 +1,6 @@
 # Kotlin Tuples
+[ ![Download](https://api.bintray.com/packages/tlazarski/maven/kotlin-tuples/images/download.svg?version=latest) ](https://bintray.com/tlazarski/maven/kotlin-tuples/_latestVersion)
+[ ![Kotlin](https://img.shields.io/badge/Kotlin-1.3.70-orange.svg)](https://kotlinlang.org)
 
 Tuples for Kotlin. The library contains `Tuple2`-`Tuple20` data classes.
 
