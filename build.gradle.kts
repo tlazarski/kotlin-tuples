@@ -35,7 +35,7 @@ publishing {
         }
         maven {
             name = "Bintray"
-            url = uri("https://api.bintray.com/maven/tlazarski/maven-repo/kotlin-tuples/;publish=1")
+            url = uri("https://api.bintray.com/maven/tlazarski/maven/kotlin-tuples/;publish=1")
             credentials {
                 username = System.getenv("GITHUB_ACTOR")
                 password = System.getenv("BINTRAY_TOKEN")
