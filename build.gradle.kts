@@ -23,6 +23,12 @@ repositories {
     mavenCentral()
 }
 
+dependencies {
+    testImplementation(kotlin("stdlib-jdk8"))
+    testImplementation("org.assertj", "assertj-core", "3.15.0")
+    testImplementation("junit", "junit", "4.12")
+}
+
 tasks {
     compileKotlin {
         kotlinOptions.jvmTarget = "1.8"
