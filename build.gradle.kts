@@ -26,11 +26,19 @@ publishing {
 
     repositories {
         maven {
-            name = "GitHubPackages"
+            name = "GitHub"
             url = uri("https://maven.pkg.github.com/tlazarski/kotlin-tuples")
             credentials {
                 username = System.getenv("GITHUB_ACTOR")
                 password = System.getenv("GITHUB_TOKEN")
+            }
+        }
+        maven {
+            name = "Bintray"
+            url = uri("https://api.bintray.com/maven/tlazarski/maven-repo/kotlin-tuples/;publish=1")
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("BINTRAY_TOKEN")
             }
         }
     }
