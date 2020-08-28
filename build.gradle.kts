@@ -14,7 +14,7 @@ buildscript {
 
 plugins {
     `maven-publish`
-    kotlin("jvm") version "1.3.70"
+    kotlin("jvm") version "1.4.0"
 }
 
 val sourcesJar by tasks.registering(Jar::class) {
